@@ -1,0 +1,21 @@
+{
+  "name": "telegram-bot-video",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev":"node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "\u0016\u001b[A\u001b[Bhttps://github.com/LucasTorres19/telegram-bot-videos"
+  },
+  "author": "lightCode",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.1",
+    "node-telegram-bot-api": "^0.58.0"
+  }
+}
