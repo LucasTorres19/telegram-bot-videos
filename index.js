@@ -1,20 +1,31 @@
-import  TelegramBot  from "node-telegram-bot-api"
+import TelegramBot  from "node-telegram-bot-api"
 import dotenv from "dotenv";
 
 dotenv.config()
 
-// replace the value below with the Telegram token you receive from @BotFather
-const token = process.env.BOT_TOKEN;
+const options = {
+   
+    polling: true,
+    baseApiUrl: 'http://localhost:8081'
+   };
 
-// Create a bot that uses 'polling' to fetch new updates
-const bot = new TelegramBot(token, { polling: true });
+   const token = process.env.BOT_TOKEN;
 
-// Listen for any kind of message. There are different kinds of
+const bot = new TelegramBot(token, options);
+
 // messages.
-bot.on("message", (msg) => {
-  console.log({ msg });
-  const chatId = msg.chat.id;
 
-  // send a message to the chat acknowledging receipt of their message
-  bot.sendMessage(chatId, "Received your message");
-});
+bot.on("message", (msg) => {
+
+    if(msg.text === "/longfile"){
+
+    const chatId = msg.chat.id;
+  
+    bot.sendMessage(chatId, "enviando video...");
+        
+    bot.sendVideo(chatId,"C:/Users/liqui/Desktop/videos guitarra/2022-01-01 17-25-30.mp4")
+
+    }
+
+  });
+  
