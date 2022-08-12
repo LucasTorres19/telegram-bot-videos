@@ -7,7 +7,12 @@ const longFile = {
     bot.sendVideo(
       chatId,
       "D:/Videos/l_OIxrq10f7X6nZg.mp4"
-    );
+    )
+    .then(() => {
+    console.log('video enviado')
+    bot.sendMessage(chatId, "video enviado 😎");
+  })
+    .catch(() => console.log('error al enviar video'));
   }
 }
 

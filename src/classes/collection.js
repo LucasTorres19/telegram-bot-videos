@@ -4,7 +4,7 @@ class Collection {
   }
   set(name, value) {
     this.items[name] = value
-  } 
+  }
   get(name) {
     return this.items[name];
   }
