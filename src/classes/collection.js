@@ -1,11 +1,10 @@
 class Collection {
-  #items
   constructor() {
-    this.#items = {};
+    this.items = {};
   }
   set(name, value) {
-    this.items = this.items.filter(i => i !== item);
-  }
+    this.items[name] = value
+  } 
   get(name) {
     return this.items[name];
   }
